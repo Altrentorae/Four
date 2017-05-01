@@ -50,17 +50,19 @@
             this.p6Count = new System.Windows.Forms.Label();
             this.p6Num = new System.Windows.Forms.Label();
             this.p6Lettering = new System.Windows.Forms.Label();
+            this.instantCalc = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.cNum)).BeginInit();
             this.SuspendLayout();
             // 
             // Next
             // 
+            this.Next.BackColor = System.Drawing.Color.LightGray;
             this.Next.Location = new System.Drawing.Point(393, 414);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(86, 31);
             this.Next.TabIndex = 0;
             this.Next.Text = "Calculate";
-            this.Next.UseVisualStyleBackColor = true;
+            this.Next.UseVisualStyleBackColor = false;
             this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // pLettering
@@ -304,12 +306,24 @@
             this.p6Lettering.Text = "label1";
             this.p6Lettering.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // instantCalc
+            // 
+            this.instantCalc.AutoSize = true;
+            this.instantCalc.Location = new System.Drawing.Point(404, 451);
+            this.instantCalc.Name = "instantCalc";
+            this.instantCalc.Size = new System.Drawing.Size(58, 17);
+            this.instantCalc.TabIndex = 25;
+            this.instantCalc.Text = "Instant";
+            this.instantCalc.UseVisualStyleBackColor = true;
+            this.instantCalc.CheckedChanged += new System.EventHandler(this.instantCalc_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(491, 483);
+            this.Controls.Add(this.instantCalc);
             this.Controls.Add(this.p6Count);
             this.Controls.Add(this.p6Num);
             this.Controls.Add(this.p6Lettering);
@@ -341,6 +355,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cNum)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -368,6 +383,7 @@
         private System.Windows.Forms.Label p6Count;
         private System.Windows.Forms.Label p6Num;
         private System.Windows.Forms.Label p6Lettering;
+        private System.Windows.Forms.CheckBox instantCalc;
     }
 }
 

@@ -64,11 +64,19 @@ namespace Four
             cLettering.Text = Current.words;
             cCount.Text = Current.count.ToString();
             //--//
+            if (instantCalc.Checked)
+            {
+                CALC_MAIN();                
+            }
             
 
         }
-
+        
         private void Next_Click(object sender, EventArgs e)
+        {
+            CALC_MAIN();
+        }
+        private void CALC_MAIN()
         {
             Previous.calculate(Current.count);
             Pr2.calculate(Previous.count);
@@ -79,7 +87,19 @@ namespace Four
             updateLabels();
         }
 
-        
+        private void instantCalc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (instantCalc.Checked)
+            {
+                Next.Enabled = false;
+                Next.BackColor = Color.SlateGray;
+            }
+            else
+            {
+                Next.Enabled = true;
+                Next.BackColor = Color.LightGray;
+            }
+        }
     }
 
     public class Struct
